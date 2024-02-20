@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let UserChoiceMsg;
+        function decreaseImageSize(elementId) 
+        {
+            var element = document.getElementById(elementId);
+            element.style.backgroundSize = "90%"; // Adjust the percentage as needed
+
+            // Delay the restoration of original size
+            setTimeout(function() {
+                element.style.backgroundSize = "cover";
+            }, 500); // 500 milliseconds delay (0.5 seconds)
+        }
+    </script>
+</head>
+<body>
+    <h1>Rock Paper Scissor</h1>
+    <div class="buttons">
+        <div class="image" id="rock" onclick="
+        decreaseImageSize('rock'); 
+        UserChoiceMsg = 'You have chosen rock.' ;
+
+        setTimeout(function() {
+        let randomnumber = Math.random() * 3;   // Value of Math.random() = 0.770208969446617  and *3 is only between 0 and 3.
+        let ComputerChoice;
+        if (randomnumber > 0 && randomnumber <= 1) {
+            ComputerChoice = 'Rock';
+        } else if ( randomnumber > 1 && randomnumber <= 2) 
+        {
+            ComputerChoice = 'Paper';
+        } else
+        {
+            ComputerChoice = 'Scissor';
+        }
+
+
+        let resultMsg;
+        if (ComputerChoice === 'Rock') {
+            resultMsg = `It's a tie.`;
+        } else if (ComputerChoice === 'Paper') 
+        {
+            resultMsg = 'Computer has Won.';
+        } else if (ComputerChoice === 'Scissor')
+        {
+            resultMsg = 'User Won.';
+        }
+        
+        alert(`You have chosen rock. Computer Choice is ${ComputerChoice}. ${resultMsg}`); 
+        },0)
+
+        ">
+            <div>Rock</div>
+        </div>
+
+        <div class="image" id="paper" onclick="decreaseImageSize('paper');
+        UserChoiceMsg = 'You have chosen paper.' ;
+
+        setTimeout(function() {
+        let randomnumber = Math.random() * 3;   // Value of Math.random() = 0.770208969446617  and *3 is only between 0 and 3.
+        let ComputerChoice;
+        if (randomnumber > 0 && randomnumber <= 1) {
+            ComputerChoice = 'Rock';
+        } else if ( randomnumber > 1 && randomnumber <= 2) 
+        {
+            ComputerChoice = 'Paper';
+        } else
+        {
+            ComputerChoice = 'Scissor';
+        }
+
+
+        let resultMsg;
+        if (ComputerChoice === 'Rock') {
+            resultMsg = `User Won.`;
+        } else if (ComputerChoice === 'Paper') 
+        {
+            resultMsg = `It's a tie.`;
+        } else if (ComputerChoice === 'Scissor')
+        {
+            resultMsg = 'Computer has Won.';
+        }
+        
+        alert(`You have chosen paper. Computer Choice is ${ComputerChoice}. ${resultMsg}`); 
+        },0)">
+            <div>Paper</div>
+        </div>
+
+        <div class="image" id="scissor" onclick="decreaseImageSize('scissor');
+        UserChoiceMsg = 'You have chosen scissor.' ;
+
+        setTimeout(function() {
+        let randomnumber = Math.random() * 3;   // Value of Math.random() = 0.770208969446617  and *3 is only between 0 and 3.
+        let ComputerChoice;
+        if (randomnumber > 0 && randomnumber <= 1) {
+            ComputerChoice = 'Rock';
+        } else if ( randomnumber > 1 && randomnumber <= 2) 
+        {
+            ComputerChoice = 'Paper';
+        } else
+        {
+            ComputerChoice = 'Scissor';
+        }
+
+
+        let resultMsg;
+        if (ComputerChoice === 'Rock') {
+            resultMsg = 'Computer has Won.';
+        } else if (ComputerChoice === 'Paper') 
+        {
+            resultMsg = `User Won.`;
+        } else if (ComputerChoice === 'Scissor')
+        {
+            resultMsg = `It's a tie.`;
+        }
+        
+        alert(`You have chosen scissor. Computer Choice is ${ComputerChoice}. ${resultMsg}`); 
+        },0)">
+            <div>Scissor</div>
+        </div>
+    </div>
+
+</body>
+</html>

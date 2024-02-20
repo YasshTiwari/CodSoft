@@ -1,0 +1,56 @@
+/* 
+body {
+    background-color: red;
+} */
+
+h1 {
+    font-style: normal;
+    font-family: georgia,serif;
+    font-weight: bolder;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    height: 180px;
+    background-color: white;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+#rock {
+    height: 150px;
+    width: 150px;
+    background-size: cover; /* Adjust this property to fit your needs */
+    background-position: center; /* Center the background image */
+    background-image: url(rock.jpg);
+    border-radius: 50%;
+    margin: 30px;
+}
+
+#paper {
+    height: 150px;
+    width: 150px;
+    background-size: cover; /* Adjust this property to fit your needs */
+    background-position: center; /* Center the background image */
+    background-image: url(paper.png);
+    border-radius: 50%;
+    margin: 30px;
+}
+
+#scissor {
+    height: 150px;
+    width: 150px;
+    background-size: cover; /* Adjust this property to fit your needs */
+    background-position: center; /* Center the background image */
+    background-image: url(scissor.png);
+    border-radius: 50%;
+    margin: 30px;
+}
+
+
+.outputcho{
+    margin-left: 60px;
+}
